@@ -1,0 +1,157 @@
+2026-02-20 20:10:51,700 [MainThread] INFO: Starting pipeline on webpage='https://en.wikipedia.org/wiki/Toronto' with max_depth=1, extract_workers=10, transform_workers=6
+2026-02-20 20:10:51,701 [Thread-1 (monitor_worker)] INFO: [       0.0s] Extract:        0 (     0.0/m) | Transform:        0 (      0.0/m) | Load:        0 (      0.0/m)
+2026-02-20 20:10:51,701 [Extract_Worker-0] INFO: Worker started
+2026-02-20 20:10:51,701 [Extract_Worker-1] INFO: Worker started
+2026-02-20 20:10:51,701 [Extract_Worker-2] INFO: Worker started
+2026-02-20 20:10:51,702 [Extract_Worker-4] INFO: Worker started
+2026-02-20 20:10:51,702 [Extract_Worker-3] INFO: Worker started
+2026-02-20 20:10:51,702 [Extract_Worker-6] INFO: Worker started
+2026-02-20 20:10:51,702 [Extract_Worker-5] INFO: Worker started
+2026-02-20 20:10:51,702 [Extract_Worker-7] INFO: Worker started
+2026-02-20 20:10:51,702 [Extract_Worker-9] INFO: Worker started
+2026-02-20 20:10:51,702 [Extract_Worker-8] INFO: Worker started
+2026-02-20 20:10:51,702 [Transform_Worker-3] INFO: Worker started
+2026-02-20 20:10:51,702 [Transform_Worker-0] INFO: Worker started
+2026-02-20 20:10:51,702 [Transform_Worker-2] INFO: Worker started
+2026-02-20 20:10:51,703 [Transform_Worker-4] INFO: Worker started
+2026-02-20 20:10:51,702 [Transform_Worker-1] INFO: Worker started
+2026-02-20 20:10:51,703 [Transform_Worker-5] INFO: Worker started
+2026-02-20 20:10:51,716 [Load_Worker] INFO: Worker started
+2026-02-20 20:10:52,724 [Thread-1 (monitor_worker)] INFO: [      1.02s] Extract:        9 (  527.71/m) | Transform:        7 (   410.44/m) | Load:        0 (      0.0/m)
+2026-02-20 20:10:53,756 [Thread-1 (monitor_worker)] INFO: [      2.06s] Extract:       25 (  729.61/m) | Transform:       21 (   612.87/m) | Load:        0 (      0.0/m)
+2026-02-20 20:10:54,778 [Thread-1 (monitor_worker)] INFO: [      3.08s] Extract:       42 (   818.8/m) | Transform:       38 (   740.82/m) | Load:        0 (      0.0/m)
+2026-02-20 20:10:55,837 [Thread-1 (monitor_worker)] INFO: [      4.14s] Extract:       56 (  812.27/m) | Transform:       50 (   725.24/m) | Load:        0 (      0.0/m)
+2026-02-20 20:10:56,958 [Thread-1 (monitor_worker)] INFO: [      5.26s] Extract:       66 (  753.26/m) | Transform:       62 (   707.61/m) | Load:        0 (      0.0/m)
+2026-02-20 20:10:58,041 [Thread-1 (monitor_worker)] INFO: [      6.34s] Extract:       78 (  738.11/m) | Transform:       74 (   700.26/m) | Load:        0 (      0.0/m)
+2026-02-20 20:10:59,045 [Thread-1 (monitor_worker)] INFO: [      7.34s] Extract:       87 (  710.76/m) | Transform:       80 (   653.58/m) | Load:        0 (      0.0/m)
+2026-02-20 20:11:00,114 [Thread-1 (monitor_worker)] INFO: [      8.41s] Extract:       97 (  691.73/m) | Transform:       92 (   656.08/m) | Load:        0 (      0.0/m)
+2026-02-20 20:11:01,202 [Thread-1 (monitor_worker)] INFO: [       9.5s] Extract:      111 (  700.97/m) | Transform:      102 (   644.13/m) | Load:        0 (      0.0/m)
+2026-02-20 20:11:02,309 [Thread-1 (monitor_worker)] INFO: [     10.61s] Extract:      121 (  684.35/m) | Transform:      117 (   661.73/m) | Load:        0 (      0.0/m)
+2026-02-20 20:11:03,448 [Thread-1 (monitor_worker)] INFO: [     11.75s] Extract:      135 (  689.48/m) | Transform:      132 (   674.16/m) | Load:        0 (      0.0/m)
+2026-02-20 20:11:04,476 [Thread-1 (monitor_worker)] INFO: [     12.78s] Extract:      143 (  671.58/m) | Transform:      139 (   652.79/m) | Load:        0 (      0.0/m)
+2026-02-20 20:11:05,572 [Thread-1 (monitor_worker)] INFO: [     13.87s] Extract:      153 (  661.79/m) | Transform:      148 (   640.17/m) | Load:        0 (      0.0/m)
+2026-02-20 20:11:06,599 [Thread-1 (monitor_worker)] INFO: [      14.9s] Extract:      160 (  644.35/m) | Transform:      150 (   604.08/m) | Load:      100 (   402.72/m)
+2026-02-20 20:11:07,791 [Thread-1 (monitor_worker)] INFO: [     16.09s] Extract:      171 (  637.65/m) | Transform:      166 (   619.01/m) | Load:      100 (   372.89/m)
+2026-02-20 20:11:08,874 [Thread-1 (monitor_worker)] INFO: [     17.17s] Extract:      184 (  642.86/m) | Transform:      177 (    618.4/m) | Load:      100 (   349.38/m)
+2026-02-20 20:11:10,045 [Thread-1 (monitor_worker)] INFO: [     18.34s] Extract:      196 (  641.06/m) | Transform:      191 (   624.71/m) | Load:      100 (   327.07/m)
+2026-02-20 20:11:11,099 [Thread-1 (monitor_worker)] INFO: [      19.4s] Extract:      208 (  643.35/m) | Transform:      204 (   630.97/m) | Load:      100 (    309.3/m)
+2026-02-20 20:11:12,127 [Thread-1 (monitor_worker)] INFO: [     20.43s] Extract:      221 (  649.17/m) | Transform:      216 (   634.48/m) | Load:      100 (   293.74/m)
+2026-02-20 20:11:13,139 [Thread-1 (monitor_worker)] INFO: [     21.44s] Extract:      239 (  668.88/m) | Transform:      237 (   663.29/m) | Load:      100 (   279.87/m)
+2026-02-20 20:11:14,145 [Thread-1 (monitor_worker)] INFO: [     22.44s] Extract:      258 (  689.69/m) | Transform:      253 (   676.32/m) | Load:      100 (   267.32/m)
+2026-02-20 20:11:15,156 [Thread-1 (monitor_worker)] INFO: [     23.46s] Extract:      276 (  706.03/m) | Transform:      271 (   693.24/m) | Load:      100 (   255.81/m)
+2026-02-20 20:11:16,250 [Thread-1 (monitor_worker)] INFO: [     24.55s] Extract:      301 (  735.65/m) | Transform:      298 (   728.32/m) | Load:      200 (    488.8/m)
+2026-02-20 20:11:17,280 [Thread-1 (monitor_worker)] INFO: [     25.58s] Extract:      323 (  757.65/m) | Transform:      320 (   750.62/m) | Load:      200 (   469.14/m)
+2026-02-20 20:11:18,295 [Thread-1 (monitor_worker)] INFO: [     26.59s] Extract:      338 (  762.56/m) | Transform:      334 (   753.53/m) | Load:      200 (   451.22/m)
+2026-02-20 20:11:19,354 [Thread-1 (monitor_worker)] INFO: [     27.65s] Extract:      347 (  752.89/m) | Transform:      343 (   744.22/m) | Load:      200 (   433.94/m)
+2026-02-20 20:11:20,359 [Thread-1 (monitor_worker)] INFO: [     28.66s] Extract:      360 (   753.7/m) | Transform:      355 (   743.23/m) | Load:      200 (   418.72/m)
+2026-02-20 20:11:21,424 [Thread-1 (monitor_worker)] INFO: [     29.72s] Extract:      376 (  758.99/m) | Transform:      369 (   744.86/m) | Load:      300 (   605.58/m)
+2026-02-20 20:11:22,479 [Thread-1 (monitor_worker)] INFO: [     30.78s] Extract:      393 (  766.13/m) | Transform:      387 (   754.44/m) | Load:      300 (   584.83/m)
+2026-02-20 20:11:23,484 [Thread-1 (monitor_worker)] INFO: [     31.78s] Extract:      411 (  775.87/m) | Transform:      404 (   762.65/m) | Load:      300 (   566.33/m)
+2026-02-20 20:11:24,505 [Thread-1 (monitor_worker)] INFO: [      32.8s] Extract:      422 (  771.85/m) | Transform:      418 (   764.54/m) | Load:      300 (   548.71/m)
+2026-02-20 20:11:25,584 [Thread-1 (monitor_worker)] INFO: [     33.88s] Extract:      429 (  759.67/m) | Transform:      424 (   750.82/m) | Load:      300 (   531.24/m)
+2026-02-20 20:11:26,641 [Thread-1 (monitor_worker)] INFO: [     34.94s] Extract:      438 (  752.14/m) | Transform:      433 (   743.56/m) | Load:      300 (   515.17/m)
+2026-02-20 20:11:27,707 [Thread-1 (monitor_worker)] INFO: [     36.01s] Extract:      455 (   758.2/m) | Transform:      449 (    748.2/m) | Load:      300 (   499.91/m)
+2026-02-20 20:11:28,729 [Thread-1 (monitor_worker)] INFO: [     37.03s] Extract:      462 (  748.62/m) | Transform:      459 (   743.76/m) | Load:      400 (   648.16/m)
+2026-02-20 20:11:29,825 [Thread-1 (monitor_worker)] INFO: [     38.12s] Extract:      476 (  749.13/m) | Transform:      469 (   738.11/m) | Load:      400 (   629.52/m)
+2026-02-20 20:11:30,874 [Thread-1 (monitor_worker)] INFO: [     39.17s] Extract:      494 (  756.64/m) | Transform:      490 (   750.52/m) | Load:      400 (   612.67/m)
+2026-02-20 20:11:31,894 [Thread-1 (monitor_worker)] INFO: [     40.19s] Extract:      509 (  759.83/m) | Transform:      500 (   746.39/m) | Load:      400 (   597.11/m)
+2026-02-20 20:11:32,932 [Thread-1 (monitor_worker)] INFO: [     41.23s] Extract:      518 (  753.79/m) | Transform:      512 (   745.06/m) | Load:      400 (   582.08/m)
+2026-02-20 20:11:33,969 [Thread-1 (monitor_worker)] INFO: [     42.27s] Extract:      535 (  759.44/m) | Transform:      530 (   752.34/m) | Load:      400 (    567.8/m)
+2026-02-20 20:11:35,043 [Thread-1 (monitor_worker)] INFO: [     43.34s] Extract:      549 (   760.0/m) | Transform:      547 (   757.23/m) | Load:      400 (   553.73/m)
+2026-02-20 20:11:36,052 [Thread-1 (monitor_worker)] INFO: [     44.35s] Extract:      566 (  765.71/m) | Transform:      564 (   763.01/m) | Load:      400 (   541.14/m)
+2026-02-20 20:11:37,115 [Thread-1 (monitor_worker)] INFO: [     45.41s] Extract:      580 (  766.28/m) | Transform:      574 (   758.35/m) | Load:      400 (   528.47/m)
+2026-02-20 20:11:38,127 [Thread-1 (monitor_worker)] INFO: [     46.43s] Extract:      599 (  774.13/m) | Transform:      595 (   768.96/m) | Load:      500 (   646.19/m)
+2026-02-20 20:11:39,143 [Thread-1 (monitor_worker)] INFO: [     47.44s] Extract:      627 (  792.96/m) | Transform:      623 (    787.9/m) | Load:      500 (   632.34/m)
+2026-02-20 20:11:40,220 [Thread-1 (monitor_worker)] INFO: [     48.52s] Extract:      651 (  805.04/m) | Transform:      651 (   805.04/m) | Load:      500 (   618.31/m)
+2026-02-20 20:11:41,265 [Thread-1 (monitor_worker)] INFO: [     49.56s] Extract:      670 (  811.07/m) | Transform:      668 (   808.65/m) | Load:      500 (   605.28/m)
+2026-02-20 20:11:42,318 [Thread-1 (monitor_worker)] INFO: [     50.62s] Extract:      683 (   809.6/m) | Transform:      679 (   804.85/m) | Load:      600 (   711.21/m)
+2026-02-20 20:11:43,421 [Thread-1 (monitor_worker)] INFO: [     51.72s] Extract:      692 (  802.78/m) | Transform:      686 (   795.82/m) | Load:      600 (   696.05/m)
+2026-02-20 20:11:44,475 [Thread-1 (monitor_worker)] INFO: [     52.77s] Extract:      702 (  798.12/m) | Transform:      698 (   793.57/m) | Load:      600 (   682.15/m)
+2026-02-20 20:11:45,604 [Thread-1 (monitor_worker)] INFO: [      53.9s] Extract:      712 (  792.53/m) | Transform:      708 (   788.08/m) | Load:      600 (   667.86/m)
+2026-02-20 20:11:46,656 [Thread-1 (monitor_worker)] INFO: [     54.96s] Extract:      723 (  789.37/m) | Transform:      717 (   782.81/m) | Load:      600 (   655.08/m)
+2026-02-20 20:11:47,746 [Thread-1 (monitor_worker)] INFO: [     56.05s] Extract:      732 (  783.66/m) | Transform:      728 (   779.37/m) | Load:      600 (   642.34/m)
+2026-02-20 20:11:48,797 [Thread-1 (monitor_worker)] INFO: [      57.1s] Extract:      743 (  780.79/m) | Transform:      739 (   776.58/m) | Load:      600 (   630.51/m)
+2026-02-20 20:11:49,852 [Thread-1 (monitor_worker)] INFO: [     58.15s] Extract:      754 (  777.97/m) | Transform:      751 (   774.88/m) | Load:      600 (   619.08/m)
+2026-02-20 20:11:50,903 [Thread-1 (monitor_worker)] INFO: [      59.2s] Extract:      764 (  774.29/m) | Transform:      761 (   771.25/m) | Load:      600 (   608.08/m)
+2026-02-20 20:11:51,952 [Thread-1 (monitor_worker)] INFO: [     60.25s] Extract:      775 (  771.76/m) | Transform:      770 (   766.78/m) | Load:      600 (   597.49/m)
+2026-02-20 20:11:52,958 [Thread-1 (monitor_worker)] INFO: [     61.26s] Extract:      783 (  766.93/m) | Transform:      778 (   762.03/m) | Load:      700 (   685.64/m)
+2026-02-20 20:11:53,995 [Thread-1 (monitor_worker)] INFO: [     62.29s] Extract:      790 (   760.9/m) | Transform:      784 (   755.12/m) | Load:      700 (   674.21/m)
+2026-02-20 20:11:54,999 [Thread-1 (monitor_worker)] INFO: [      63.3s] Extract:      800 (  758.31/m) | Transform:      796 (   754.52/m) | Load:      700 (   663.52/m)
+2026-02-20 20:11:56,053 [Thread-1 (monitor_worker)] INFO: [     64.35s] Extract:      810 (  755.21/m) | Transform:      804 (   749.62/m) | Load:      700 (   652.65/m)
+2026-02-20 20:11:57,183 [Thread-1 (monitor_worker)] INFO: [     65.48s] Extract:      816 (  747.68/m) | Transform:      814 (   745.85/m) | Load:      700 (   641.39/m)
+2026-02-20 20:11:58,191 [Thread-1 (monitor_worker)] INFO: [     66.49s] Extract:      824 (  743.56/m) | Transform:      823 (   742.66/m) | Load:      700 (   631.67/m)
+2026-02-20 20:11:59,241 [Thread-1 (monitor_worker)] INFO: [     67.54s] Extract:      834 (  740.88/m) | Transform:      826 (   733.78/m) | Load:      700 (   621.85/m)
+2026-02-20 20:12:00,249 [Thread-1 (monitor_worker)] INFO: [     68.55s] Extract:      840 (  735.25/m) | Transform:      835 (   730.88/m) | Load:      700 (   612.71/m)
+2026-02-20 20:12:01,312 [Thread-1 (monitor_worker)] INFO: [     69.61s] Extract:      850 (  732.64/m) | Transform:      845 (   728.33/m) | Load:      700 (   603.35/m)
+2026-02-20 20:12:02,433 [Thread-1 (monitor_worker)] INFO: [     70.73s] Extract:      863 (  732.06/m) | Transform:      857 (   726.97/m) | Load:      700 (   593.79/m)
+2026-02-20 20:12:03,537 [Thread-1 (monitor_worker)] INFO: [     71.84s] Extract:      877 (   732.5/m) | Transform:      873 (   729.16/m) | Load:      800 (   668.18/m)
+2026-02-20 20:12:04,561 [Thread-1 (monitor_worker)] INFO: [     72.86s] Extract:      890 (  732.91/m) | Transform:      887 (   730.43/m) | Load:      800 (   658.79/m)
+2026-02-20 20:12:05,576 [Thread-1 (monitor_worker)] INFO: [     73.88s] Extract:      898 (  729.33/m) | Transform:      897 (   728.52/m) | Load:      800 (   649.74/m)
+2026-02-20 20:12:06,707 [Thread-1 (monitor_worker)] INFO: [     75.01s] Extract:      906 (  724.73/m) | Transform:      899 (   719.13/m) | Load:      800 (   639.94/m)
+2026-02-20 20:12:07,851 [Thread-1 (monitor_worker)] INFO: [     76.15s] Extract:      918 (  723.31/m) | Transform:      907 (   714.64/m) | Load:      800 (   630.33/m)
+2026-02-20 20:12:08,897 [Thread-1 (monitor_worker)] INFO: [      77.2s] Extract:      926 (  719.72/m) | Transform:      918 (    713.5/m) | Load:      800 (   621.79/m)
+2026-02-20 20:12:09,906 [Thread-1 (monitor_worker)] INFO: [     78.21s] Extract:      935 (  717.34/m) | Transform:      929 (   712.74/m) | Load:      800 (   613.77/m)
+2026-02-20 20:12:10,962 [Thread-1 (monitor_worker)] INFO: [     79.26s] Extract:      949 (  718.38/m) | Transform:      943 (   713.84/m) | Load:      800 (   605.59/m)
+2026-02-20 20:12:12,167 [Thread-1 (monitor_worker)] INFO: [     80.47s] Extract:      963 (  718.06/m) | Transform:      958 (   714.33/m) | Load:      800 (   596.52/m)
+2026-02-20 20:12:13,297 [Thread-1 (monitor_worker)] INFO: [      81.6s] Extract:      978 (  719.15/m) | Transform:      974 (   716.21/m) | Load:      800 (   588.26/m)
+2026-02-20 20:12:14,331 [Thread-1 (monitor_worker)] INFO: [     82.63s] Extract:      995 (   722.5/m) | Transform:      991 (   719.59/m) | Load:      800 (    580.9/m)
+2026-02-20 20:12:15,345 [Thread-1 (monitor_worker)] INFO: [     83.64s] Extract:     1016 (   728.8/m) | Transform:     1013 (   726.65/m) | Load:      800 (   573.86/m)
+2026-02-20 20:12:16,397 [Thread-1 (monitor_worker)] INFO: [      84.7s] Extract:     1029 (  728.96/m) | Transform:     1025 (   726.12/m) | Load:      900 (   637.57/m)
+2026-02-20 20:12:17,424 [Thread-1 (monitor_worker)] INFO: [     85.72s] Extract:     1043 (  730.02/m) | Transform:     1039 (   727.22/m) | Load:      900 (   629.93/m)
+2026-02-20 20:12:18,530 [Thread-1 (monitor_worker)] INFO: [     86.83s] Extract:     1065 (  735.92/m) | Transform:     1060 (   732.47/m) | Load:      900 (   621.91/m)
+2026-02-20 20:12:19,617 [Thread-1 (monitor_worker)] INFO: [     87.92s] Extract:     1083 (  739.11/m) | Transform:     1078 (    735.7/m) | Load:      900 (   614.22/m)
+2026-02-20 20:12:20,711 [Thread-1 (monitor_worker)] INFO: [     89.01s] Extract:     1095 (  738.11/m) | Transform:     1090 (   734.74/m) | Load:      900 (   606.67/m)
+2026-02-20 20:12:21,804 [Thread-1 (monitor_worker)] INFO: [      90.1s] Extract:     1108 (  737.82/m) | Transform:     1104 (   735.15/m) | Load:      900 (   599.31/m)
+2026-02-20 20:12:22,875 [Thread-1 (monitor_worker)] INFO: [     91.17s] Extract:     1117 (  735.07/m) | Transform:     1113 (   732.44/m) | Load:     1000 (   658.08/m)
+2026-02-20 20:12:23,911 [Thread-1 (monitor_worker)] INFO: [     92.21s] Extract:     1123 (  730.72/m) | Transform:     1117 (   726.82/m) | Load:     1000 (   650.69/m)
+2026-02-20 20:12:24,926 [Thread-1 (monitor_worker)] INFO: [     93.23s] Extract:     1130 (  727.27/m) | Transform:     1125 (   724.05/m) | Load:     1000 (    643.6/m)
+2026-02-20 20:12:26,075 [Thread-1 (monitor_worker)] INFO: [     94.37s] Extract:     1146 (  728.59/m) | Transform:     1141 (   725.41/m) | Load:     1000 (   635.77/m)
+2026-02-20 20:12:27,095 [Thread-1 (monitor_worker)] INFO: [     95.39s] Extract:     1166 (  733.37/m) | Transform:     1163 (   731.49/m) | Load:     1000 (   628.96/m)
+2026-02-20 20:12:28,137 [Thread-1 (monitor_worker)] INFO: [     96.44s] Extract:     1195 (  743.49/m) | Transform:     1193 (   742.25/m) | Load:     1000 (   622.17/m)
+2026-02-20 20:12:29,177 [Thread-1 (monitor_worker)] INFO: [     97.48s] Extract:     1228 (  755.87/m) | Transform:     1225 (   754.03/m) | Load:     1100 (   677.09/m)
+2026-02-20 20:12:30,185 [Thread-1 (monitor_worker)] INFO: [     98.48s] Extract:     1258 (  766.42/m) | Transform:     1255 (   764.59/m) | Load:     1100 (   670.16/m)
+2026-02-20 20:12:31,275 [Thread-1 (monitor_worker)] INFO: [     99.57s] Extract:     1291 (  777.91/m) | Transform:     1290 (   777.31/m) | Load:     1100 (   662.82/m)
+2026-02-20 20:12:32,293 [Thread-1 (monitor_worker)] INFO: [    100.59s] Extract:     1312 (  782.57/m) | Transform:     1308 (   780.18/m) | Load:     1200 (   715.76/m)
+2026-02-20 20:12:33,336 [Thread-1 (monitor_worker)] INFO: [    101.64s] Extract:     1319 (  778.66/m) | Transform:     1315 (    776.3/m) | Load:     1200 (   708.41/m)
+2026-02-20 20:12:34,474 [Thread-1 (monitor_worker)] INFO: [    102.77s] Extract:     1324 (  772.96/m) | Transform:     1320 (   770.63/m) | Load:     1200 (   700.57/m)
+2026-02-20 20:12:35,503 [Thread-1 (monitor_worker)] INFO: [     103.8s] Extract:     1331 (  769.34/m) | Transform:     1324 (    765.3/m) | Load:     1200 (   693.62/m)
+2026-02-20 20:12:36,582 [Thread-1 (monitor_worker)] INFO: [    104.88s] Extract:     1332 (   762.0/m) | Transform:     1327 (   759.14/m) | Load:     1200 (   686.49/m)
+2026-02-20 20:12:37,788 [Thread-1 (monitor_worker)] INFO: [    106.09s] Extract:     1338 (  756.73/m) | Transform:     1334 (   754.47/m) | Load:     1300 (   735.24/m)
+2026-02-20 20:12:38,814 [Thread-1 (monitor_worker)] INFO: [    107.11s] Extract:     1344 (  752.85/m) | Transform:     1340 (   750.61/m) | Load:     1300 (    728.2/m)
+2026-02-20 20:12:39,870 [Thread-1 (monitor_worker)] INFO: [    108.17s] Extract:     1354 (  751.05/m) | Transform:     1347 (   747.16/m) | Load:     1300 (   721.09/m)
+2026-02-20 20:12:40,964 [Thread-1 (monitor_worker)] INFO: [    109.26s] Extract:     1358 (  745.72/m) | Transform:     1351 (   741.88/m) | Load:     1300 (   713.87/m)
+2026-02-20 20:12:41,994 [Thread-1 (monitor_worker)] INFO: [    110.29s] Extract:     1364 (  742.02/m) | Transform:     1359 (    739.3/m) | Load:     1300 (    707.2/m)
+2026-02-20 20:12:43,117 [Thread-1 (monitor_worker)] INFO: [    111.42s] Extract:     1372 (  738.85/m) | Transform:     1366 (   735.62/m) | Load:     1300 (   700.08/m)
+2026-02-20 20:12:44,164 [Thread-1 (monitor_worker)] INFO: [    112.46s] Extract:     1378 (  735.17/m) | Transform:     1371 (   731.43/m) | Load:     1300 (   693.56/m)
+2026-02-20 20:12:45,238 [Thread-1 (monitor_worker)] INFO: [    113.54s] Extract:     1384 (  731.39/m) | Transform:     1377 (   727.69/m) | Load:     1300 (    687.0/m)
+2026-02-20 20:12:46,292 [Thread-1 (monitor_worker)] INFO: [    114.59s] Extract:     1392 (  728.85/m) | Transform:     1386 (   725.71/m) | Load:     1300 (   680.68/m)
+2026-02-20 20:12:47,473 [Thread-1 (monitor_worker)] INFO: [    115.77s] Extract:     1400 (  725.56/m) | Transform:     1396 (   723.49/m) | Load:     1300 (   673.74/m)
+2026-02-20 20:12:48,567 [Thread-1 (monitor_worker)] INFO: [    116.87s] Extract:     1410 (   723.9/m) | Transform:     1402 (   719.79/m) | Load:     1300 (   667.43/m)
+2026-02-20 20:12:49,656 [Thread-1 (monitor_worker)] INFO: [    117.96s] Extract:     1419 (   721.8/m) | Transform:     1411 (   717.73/m) | Load:     1300 (   661.27/m)
+2026-02-20 20:12:50,689 [Thread-1 (monitor_worker)] INFO: [    118.99s] Extract:     1426 (  719.06/m) | Transform:     1420 (   716.04/m) | Load:     1300 (   655.53/m)
+2026-02-20 20:12:52,031 [Thread-1 (monitor_worker)] INFO: [    120.33s] Extract:     1437 (  716.53/m) | Transform:     1431 (   713.54/m) | Load:     1300 (   648.22/m)
+2026-02-20 20:12:53,119 [Thread-1 (monitor_worker)] INFO: [    121.42s] Extract:     1448 (  715.55/m) | Transform:     1444 (   713.57/m) | Load:     1300 (   642.41/m)
+2026-02-20 20:12:54,173 [Thread-1 (monitor_worker)] INFO: [    122.47s] Extract:     1460 (  715.26/m) | Transform:     1454 (   712.32/m) | Load:     1400 (   685.87/m)
+2026-02-20 20:12:55,318 [Thread-1 (monitor_worker)] INFO: [    123.62s] Extract:     1467 (  712.03/m) | Transform:     1464 (   710.58/m) | Load:     1400 (   679.51/m)
+2026-02-20 20:12:56,371 [Thread-1 (monitor_worker)] INFO: [    124.67s] Extract:     1479 (   711.8/m) | Transform:     1473 (   708.91/m) | Load:     1400 (   673.78/m)
+2026-02-20 20:12:57,458 [Thread-1 (monitor_worker)] INFO: [    125.76s] Extract:     1488 (  709.94/m) | Transform:     1484 (   708.03/m) | Load:     1400 (   667.95/m)
+2026-02-20 20:12:58,500 [Thread-1 (monitor_worker)] INFO: [     126.8s] Extract:     1497 (  708.36/m) | Transform:     1491 (   705.52/m) | Load:     1400 (   662.46/m)
+2026-02-20 20:12:59,577 [Thread-1 (monitor_worker)] INFO: [    127.88s] Extract:     1508 (  707.56/m) | Transform:     1505 (   706.15/m) | Load:     1400 (   656.89/m)
+2026-02-20 20:12:59,739 [Extract_Worker-6] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,739 [Extract_Worker-9] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,739 [Extract_Worker-2] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,751 [Extract_Worker-3] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,751 [Extract_Worker-8] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,751 [Extract_Worker-5] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,770 [Extract_Worker-4] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,782 [Extract_Worker-0] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,739 [Extract_Worker-1] INFO: Worker received shutdown signal.
+2026-02-20 20:12:59,801 [Extract_Worker-7] INFO: Worker received shutdown signal.
+2026-02-20 20:13:00,284 [Transform_Worker-2] INFO: Worker received shutdown signal
+2026-02-20 20:13:00,284 [Transform_Worker-1] INFO: Worker received shutdown signal
+2026-02-20 20:13:00,284 [Transform_Worker-4] INFO: Worker received shutdown signal
+2026-02-20 20:13:00,284 [Transform_Worker-0] INFO: Worker received shutdown signal
+2026-02-20 20:13:00,284 [Transform_Worker-5] INFO: Worker received shutdown signal
+2026-02-20 20:13:00,284 [Transform_Worker-3] INFO: Worker received shutdown signal
+2026-02-20 20:13:00,288 [Load_Worker] INFO: Worker received shutdown signal
+2026-02-20 20:13:00,618 [MainThread] INFO: ('\rSeconds Elapsed: 128.91725397109985 [Extract] 1510 links, 702.78/min | [Tranform] 1510, 702.78/min | [Load] 1510, 702.78/min', 'DLQ: set()')

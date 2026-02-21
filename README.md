@@ -1,79 +1,97 @@
-# Hometask - ETL Pipeline
+# Read Me
 
-## Getting Started
+My implementation of a wikipedia crawler utilizes a producer-consumer architecture with thread-safe queues to process data across three distinct stages.
 
-Please follow the [fork and pull request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) workflow:
+## Setup Instructions
 
-1. Fork the repository.
-2. Create a new branch for your solution.
-3. Create your pipeline code, documentation.
-   - Use `uv` to manage the project and your submission is expected to include `pyproject.toml` and `uv.lock`.
-   - Use python `3.13+`.
-   - Follow requirements stated below.
-4. Send a pull request.
-   - In your PR description, include any notes about your approach, assumptions, or design decisions
+1. Install uv:
 
-## Question: Build a Data Integration Pipeline
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
-### Context
+2. Sync with the project to install all the dependencies:
 
-You need to build a data pipeline that:
+```
+uv sync
+```
 
-1. Fetches data from [Wikipedia - Toronto](https://en.wikipedia.org/wiki/Toronto) and follows links to a limited depth (2 levels max, i.e. starting URL + linked URLs + their linked URLs)
-2. Transforms and validates the data
-3. Loads it into a staging area
-4. Moves clean data to a final destination
-5. Includes basic error handling
+3. Copy `.env.example` as `.env`, you shouldn't have to change any variables:
 
-## Requirements
+```
+cp .env.example .env
+```
 
-### Part 1: Data Extraction
+## Run the Pipeline
 
-- Create a script that fetches data from [Wikipedia - Toronto](https://en.wikipedia.org/wiki/Toronto) and follows links to a limited depth (2 levels)
-- Handle rate limiting and retries
-- Implement basic error handling
-- Consider circular reference handling for link traversal
+The pipeline is executed via main.py with several configurable arguments:
+Arguments:
 
-### Part 2: Data Transformation
+    -w, --webpage: The starting Wikipedia URL.
 
-- Clean and transform the data (handle nulls, format dates, validate schemas)
+    -d, --depth: How many levels of links to follow (default: 2).
 
-### Part 3: Data Loading
+    -e, --extract_workers: Concurrent threads for network requests.
 
-- Load data to a staging location (can be CSV, JSON, or a local database)
-- Create a final "production" table/view
+    -t, --transform_workers: Concurrent threads for HTML parsing.
 
-### Part 4: Documentation
+    -v, --verbose: Enables DEBUG logging for detailed internal tracking.
 
-- Add basic logging throughout the pipeline
-- Create a README with setup instructions
-- Document data schema and transformations
+I found the sweet spot config is 10 extract workers, and 5 transform workers:
 
-### Tech Stack (use what you're comfortable with)
+```
+uv run main.py --webpage "https://en.wikipedia.org/wiki/Toronto" --depth 2 --extract_workers 10 --transform_workers 5
+```
 
-- Python (required)
-- SQL (if using a database)
-- Any libraries you prefer (pandas, sqlalchemy, requests, etc.)
+or
 
-## Deliverables
+```
+uv run main.py --webpage "https://en.wikipedia.org/wiki/Toronto" -d 1 -e 10 -t 5
+```
 
-Your pull request should include:
+## Data Schema
 
-1. **Working, tested code** with all code files
-2. **Project configuration files:**
-   - `pyproject.toml` (managed with `uv`)
-   - `uv.lock`
-3. **README.md** with:
-   - Setup instructions
-   - How to run the pipeline
-   - Data schema documentation
-   - Assumptions and design decisions
-4. **PR description** with a brief explanation of your approach
+The project uses SQLModel (built on SQLAlchemy and Pydantic) for data integrity. It's also used to pass data between the transformer and loader worker.
 
-## Performance Metrics
+`TransformedData` Table
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| **link** (PK) | `String` | Unique Wikipedia URL. |
+| **parent_link** | `String` | The URL where this link was discovered. |
+| **title** | `String` | Page title (Indexed). |
+| **content** | `String` | Cleaned text (noise/tables/scripts removed). |
+| **num_links** | `Integer` | Count of outgoing links in the main content. |
+| **num_h2** | `Integer` | Count of H2 headings. |
+| **num_refs** | `Integer` | Count of citations in the references section. |
+| **word_count** | `Integer` | Number of words in cleaned content. |
+| **scraped_at** | `DateTime` | Timestamp of the crawl. |
+| **modified_at_utc** | `DateTime` | Last edited date extracted from the Wiki footer. |
 
-In our production environment, we process data for thousands of creators daily, requiring efficient data extraction pipelines. While you don't need to process at that scale for this assignment, we'd like to understand your pipeline's performance characteristics.
+## Assumptions and Design Decisions
 
-**Please include in your PR description:**
-- **Links processed per minute:** What throughput (links/minute) can your solution achieve?
-- **Brief performance notes:** Any observations about bottlenecks or optimization opportunities you identified
+1. Multi-Stage Pipeline (Fan-In/Fan-Out)
+
+The project uses three specialized worker types connected by `queue.Queue` objects:
+
+- Extractors: I/O bound. Perform network requests and URL discovery. Traverses webpages using BFS until `max_depth` is reached.
+- Transformers: CPU bound. Use BeautifulSoup to clean and parse HTML. It uses `html.parser` because does not have external dependencies like `lxml`.
+- Loader: Disk I/O bound. A single worker batches records to SQLite to avoid "Database Locked" errors.
+
+2. Resilience and Error Handling
+   - Poison Pills: Shutdown signals (`None`) are passed through queues to ensure workers finish their current task and close gracefully after the main thread calls .join() for each `Queue` being watched by each type of worker.
+   - Dead Letter Queue (DLQ): Errors (Timeouts, IntegrityErrors) are captured in a thread-safe set within CrawlStats rather than crashing the thread.
+   - Retries: The extraction layer uses `urllib3` retry logic with exponential backoff to handle transient 502/503 errors.
+
+3. Performance Optimizations
+
+- Visited Set: A global thread-safe set prevents the extractor workers from requesting the same URL multiple times.
+- Batch Loading: The load_worker collects records and uses session.merge() for "Upsert" logic, committing in chunks to minimize disk overhead.
+- Rate Limiting: A global limiter ensures compliance with Wikipedia's bot policies by spacing out requests.
+
+4. Data Cleaning Logic
+
+The transformer specifically targets `div.mw-content-container` and decomposes <table>, <script>, and <style> tags before calculating word counts to ensure "prose-only" data metrics.
+
+5. Database choice
+
+I chose SQLite because it provides the ACID compliance and relational indexing of a professional database without the overhead of managing a separate database server, making the pipeline portable and robust against crashes.
