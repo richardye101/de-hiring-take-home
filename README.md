@@ -74,7 +74,7 @@ The project uses SQLModel (built on SQLAlchemy and Pydantic) for data integrity.
 The project uses three specialized worker types connected by `queue.Queue` objects:
 
 - Extractors: I/O bound. Perform network requests and URL discovery. Traverses webpages using BFS until `max_depth` is reached.
-- Transformers: CPU bound. Use BeautifulSoup to clean and parse HTML. It uses `html.parser` because does not have external dependencies like `lxml`.
+- Transformers: CPU bound. Use BeautifulSoup to clean and parse HTML. It uses `html.parser` because does not have external dependencies like `lxml` (the C library for `lxml`.
 - Loader: Disk I/O bound. A single worker batches records to SQLite to avoid "Database Locked" errors.
 
 2. Resilience and Error Handling
@@ -90,8 +90,13 @@ The project uses three specialized worker types connected by `queue.Queue` objec
 
 4. Data Cleaning Logic
 
-The transformer specifically targets `div.mw-content-container` and decomposes <table>, <script>, and <style> tags before calculating word counts to ensure "prose-only" data metrics.
+The transformer specifically targets `div.mw-content-container` and decomposes `<table>`, `<script>`, and `<style>` tags before calculating word counts to ensure "prose-only" data metrics.
 
 5. Database choice
 
 I chose SQLite because it provides the ACID compliance and relational indexing of a professional database without the overhead of managing a separate database server, making the pipeline portable and robust against crashes.
+
+## Metrics
+
+- **Links processed per minute:** I was able to achieve about 700 links/min through the entire pipeline.
+- **Brief performance notes:** I played with the number of workers in each stage of the pipeline (except loading), and I noticed that although increased the number of extract workers increased the rate at which extraction occured, I quickly ran into rate limiting by Wikipedia. To be respectful, I implemented a global rate limiter to limit the total number of requests I would send to avoid hitting Wikipedia's limit. I also noted that increasing the number of transformer workers sped up that stage of the pipeline, as the `html.parser` utilizes C under the hood, which releases the GIL.
