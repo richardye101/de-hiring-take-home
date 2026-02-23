@@ -76,9 +76,14 @@ def transform_worker(input_queue: Queue[RawData], output_queue: Queue[Transforme
                 num_links = len(body_content.find_all("a", href=True))
                 num_h2 = len(body_content.find_all("h2"))
 
-                # Remove visual/meta noise for clean word count
-                for tag in body_content(["style", "script", "table", "figure", "div", "sup"]):
+                noise_selectors = ["style", "script", "table", "figure", "sup", "link"]
+                for tag in body_content(noise_selectors):
                     tag.decompose()
+
+                # 3. Specifically remove noise divs by class if necessary,
+                # but let the main parser-output div stay.
+                for noise_div in body_content.find_all("div", class_=["navbox", "reflist", "sistersitebox"]):
+                    noise_div.decompose()
 
                 full_text = body_content.get_text(separator=" ", strip=True)
                 word_count = len(full_text.split())

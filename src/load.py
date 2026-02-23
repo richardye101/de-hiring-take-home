@@ -38,8 +38,8 @@ def load_worker(input_queue: Queue[TransformedData], batch_size: int, stats: Cra
             if result is None:  # Poison Pill
                 if batch:
                     load_count = _flush_to_db(engine, batch)
+                    stats.inc_loaded(load_count)
                 logger.info("Worker received shutdown signal")
-                stats.inc_loaded(load_count)
                 break
 
             # Since 'result' is already a SQLModel object,
@@ -49,8 +49,8 @@ def load_worker(input_queue: Queue[TransformedData], batch_size: int, stats: Cra
 
             if len(batch) >= batch_size:
                 load_count = _flush_to_db(engine, batch)
+                stats.inc_loaded(load_count)
                 batch = []
-            stats.inc_loaded(load_count)
         except Exception as e:
             logger.error(f"Error: {e}\tFailed to load: {result}")
             for i in batch:

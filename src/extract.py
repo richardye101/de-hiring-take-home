@@ -109,14 +109,14 @@ def extract_worker(max_depth: int, input_queue: Queue[ExtractItem], output_queue
                 visited.add(url)
 
             limiter.wait()
-            r = session.get(url, timeout=3)
+            r = session.get(url, timeout=4)
             r.raise_for_status()
 
             if r.status_code == 200:
                 # Passing the queue by reference
                 logger.debug(f"[{url}] Extracting links")
                 if depth < max_depth:
-                    extract_links(parent_link, r.text, depth, input_queue)
+                    extract_links(url, r.text, depth, input_queue)
 
             res = RawData(link=url, parent_link=parent_link, content=r.text, scraped_at=datetime.now())
             output_queue.put(res)
